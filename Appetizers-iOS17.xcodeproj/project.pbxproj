@@ -14,6 +14,7 @@
 		0D7957CA2C175696004B683E /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957C92C175696004B683E /* AppetizerListView.swift */; };
 		0D7957CC2C1756A8004B683E /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957CB2C1756A8004B683E /* AccountView.swift */; };
 		0D7957CE2C1756BA004B683E /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957CD2C1756BA004B683E /* OrderView.swift */; };
+		0D7957D02C175F45004B683E /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957CF2C175F45004B683E /* Appetizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		0D7957C92C175696004B683E /* AppetizerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListView.swift; sourceTree = "<group>"; };
 		0D7957CB2C1756A8004B683E /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		0D7957CD2C1756BA004B683E /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		0D7957CF2C175F45004B683E /* Appetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				0D7957C92C175696004B683E /* AppetizerListView.swift */,
 				0D7957CB2C1756A8004B683E /* AccountView.swift */,
 				0D7957CD2C1756BA004B683E /* OrderView.swift */,
+				0D7957CF2C175F45004B683E /* Appetizer.swift */,
 			);
 			path = "Appetizers-iOS17";
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D7957D02C175F45004B683E /* Appetizer.swift in Sources */,
 				0D7957CC2C1756A8004B683E /* AccountView.swift in Sources */,
 				0D7957BE2C1755F6004B683E /* AppetizerTabView.swift in Sources */,
 				0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */,
