@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957BB2C1755F6004B683E /* Appetizers_iOS17App.swift */; };
-		0D7957BE2C1755F6004B683E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957BD2C1755F6004B683E /* ContentView.swift */; };
+		0D7957BE2C1755F6004B683E /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957BD2C1755F6004B683E /* AppetizerTabView.swift */; };
 		0D7957C02C1755F7004B683E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7957BF2C1755F7004B683E /* Assets.xcassets */; };
 		0D7957C32C1755F7004B683E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7957C22C1755F7004B683E /* Preview Assets.xcassets */; };
+		0D7957CA2C175696004B683E /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957C92C175696004B683E /* AppetizerListView.swift */; };
+		0D7957CC2C1756A8004B683E /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957CB2C1756A8004B683E /* AccountView.swift */; };
+		0D7957CE2C1756BA004B683E /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957CD2C1756BA004B683E /* OrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D7957B82C1755F6004B683E /* Appetizers-iOS17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Appetizers-iOS17.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7957BB2C1755F6004B683E /* Appetizers_iOS17App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizers_iOS17App.swift; sourceTree = "<group>"; };
-		0D7957BD2C1755F6004B683E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0D7957BD2C1755F6004B683E /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
 		0D7957BF2C1755F7004B683E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D7957C22C1755F7004B683E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0D7957C92C175696004B683E /* AppetizerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListView.swift; sourceTree = "<group>"; };
+		0D7957CB2C1756A8004B683E /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		0D7957CD2C1756BA004B683E /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +58,12 @@
 			isa = PBXGroup;
 			children = (
 				0D7957BB2C1755F6004B683E /* Appetizers_iOS17App.swift */,
-				0D7957BD2C1755F6004B683E /* ContentView.swift */,
+				0D7957BD2C1755F6004B683E /* AppetizerTabView.swift */,
 				0D7957BF2C1755F7004B683E /* Assets.xcassets */,
 				0D7957C12C1755F7004B683E /* Preview Content */,
+				0D7957C92C175696004B683E /* AppetizerListView.swift */,
+				0D7957CB2C1756A8004B683E /* AccountView.swift */,
+				0D7957CD2C1756BA004B683E /* OrderView.swift */,
 			);
 			path = "Appetizers-iOS17";
 			sourceTree = "<group>";
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D7957BE2C1755F6004B683E /* ContentView.swift in Sources */,
+				0D7957CC2C1756A8004B683E /* AccountView.swift in Sources */,
+				0D7957BE2C1755F6004B683E /* AppetizerTabView.swift in Sources */,
 				0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */,
+				0D7957CA2C175696004B683E /* AppetizerListView.swift in Sources */,
+				0D7957CE2C1756BA004B683E /* OrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
