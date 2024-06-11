@@ -10,17 +10,31 @@ import SwiftUI
 final class AppetizerListViewModel: ObservableObject {
     //var to store list data
     @Published var appetizers: [Appetizer] = []
+    @Published var alertItem: AlertItem?
     
     func getAppetizers() {
         //calling getAppetizers from nwmanager
-        NetworkManager.shared.getAppetizers { result in
+        //adding self above, so no need to add self to all variables used within a closure
+        NetworkManager.shared.getAppetizers { [self] result in
             //need to run below code in async as it is responsible for setting views
             DispatchQueue.main.async {
                 switch result {
                 case .success(let appetizers):
                     self.appetizers = appetizers
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    switch error {
+                    case .invalidResponse:
+                        alertItem = AlertContext.invalidResponse
+                        
+                    case .invalidURL:
+                        alertItem = AlertContext.invalidURL
+                        
+                    case .invalidData:
+                        alertItem = AlertContext.invalidData
+                        
+                    case .unableToComplete:
+                        alertItem = AlertContext.unableToComplete
+                    }
                 }
             }
         }

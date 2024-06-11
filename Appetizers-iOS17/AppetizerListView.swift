@@ -24,6 +24,12 @@ struct AppetizerListView: View {
             //this is equivalent to viewdidappear
             viewModel.getAppetizers()
         }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            //everytime alertItem changes in viewModel, this part .alert get called 
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
+        }
     }
     
     

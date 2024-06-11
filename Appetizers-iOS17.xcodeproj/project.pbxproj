@@ -19,6 +19,7 @@
 		0D7957D42C176EE7004B683E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957D32C176EE7004B683E /* NetworkManager.swift */; };
 		0D7957D62C1770A2004B683E /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957D52C1770A2004B683E /* APError.swift */; };
 		0D7C94B62C18C5C20023B33C /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C94B52C18C5C20023B33C /* AppetizerListViewModel.swift */; };
+		0D7C94B82C18C9B00023B33C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C94B72C18C9B00023B33C /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		0D7957D32C176EE7004B683E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0D7957D52C1770A2004B683E /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
 		0D7C94B52C18C5C20023B33C /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
+		0D7C94B72C18C9B00023B33C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				0D7957D32C176EE7004B683E /* NetworkManager.swift */,
 				0D7957D52C1770A2004B683E /* APError.swift */,
 				0D7C94B52C18C5C20023B33C /* AppetizerListViewModel.swift */,
+				0D7C94B72C18C9B00023B33C /* Alert.swift */,
 			);
 			path = "Appetizers-iOS17";
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				0D7957BE2C1755F6004B683E /* AppetizerTabView.swift in Sources */,
 				0D7957D42C176EE7004B683E /* NetworkManager.swift in Sources */,
 				0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */,
+				0D7C94B82C18C9B00023B33C /* Alert.swift in Sources */,
 				0D7957CA2C175696004B683E /* AppetizerListView.swift in Sources */,
 				0D7957CE2C1756BA004B683E /* OrderView.swift in Sources */,
 			);
