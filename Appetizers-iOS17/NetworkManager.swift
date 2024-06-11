@@ -12,7 +12,7 @@ final class NetworkManager {
     static let shared = NetworkManager()
     
     //URL
-    static let baseURL = "http://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
+    static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
     private let appetizerURL = baseURL + "appetizers"
     
     private init() {}
@@ -32,7 +32,8 @@ final class NetworkManager {
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
             //2a. error
             //checking if session returned an error
-            guard let _ = error else {
+            if let error1 = error {
+                print("\(error1)")
                 completed(.failure(.unableToComplete))
                 return
             }
