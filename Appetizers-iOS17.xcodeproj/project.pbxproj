@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D27AD9A2C19F46A006957F0 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D27AD992C19F46A006957F0 /* RemoteImage.swift */; };
 		0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957BB2C1755F6004B683E /* Appetizers_iOS17App.swift */; };
 		0D7957BE2C1755F6004B683E /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957BD2C1755F6004B683E /* AppetizerTabView.swift */; };
 		0D7957C02C1755F7004B683E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7957BF2C1755F7004B683E /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D27AD992C19F46A006957F0 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		0D7957B82C1755F6004B683E /* Appetizers-iOS17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Appetizers-iOS17.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7957BB2C1755F6004B683E /* Appetizers_iOS17App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizers_iOS17App.swift; sourceTree = "<group>"; };
 		0D7957BD2C1755F6004B683E /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				0D7C94B72C18C9B00023B33C /* Alert.swift */,
 				0D7C94B92C18D0B80023B33C /* LoadingView.swift */,
 				0D7C94BB2C18D1A80023B33C /* Color+Ext.swift */,
+				0D27AD992C19F46A006957F0 /* RemoteImage.swift */,
 			);
 			path = "Appetizers-iOS17";
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				0D7C94BA2C18D0B80023B33C /* LoadingView.swift in Sources */,
 				0D7957BE2C1755F6004B683E /* AppetizerTabView.swift in Sources */,
 				0D7957D42C176EE7004B683E /* NetworkManager.swift in Sources */,
+				0D27AD9A2C19F46A006957F0 /* RemoteImage.swift in Sources */,
 				0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */,
 				0D7C94B82C18C9B00023B33C /* Alert.swift in Sources */,
 				0D7957CA2C175696004B683E /* AppetizerListView.swift in Sources */,
