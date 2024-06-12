@@ -5,11 +5,14 @@
 //  Created by Mayur Vaity on 10/06/24.
 //
 
-import Foundation
+import UIKit
 
 final class NetworkManager {
     //singleton
     static let shared = NetworkManager()
+    //creating cache to store Images
+    //cache takes a key and an object
+    private let cache = NSCache<NSString, UIImage>()
     
     //URL
     static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
@@ -69,6 +72,40 @@ final class NetworkManager {
         }
         
         //3. start the task (resume)
+        task.resume()
+    }
+    
+    //network call fn to download image at the url 
+    func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
+        //creating a cache key, for specified url
+        let cacheKey = NSString(string: urlString)
+        
+        //then checking if there is an object at this cachekey (in our cache), if there is, will return image and call completion handler and return
+        if let image = cache.object(forKey: cacheKey) {
+            completed(image)
+            return
+        }
+        //checking if urlstring is a true URL, if not return
+        guard let url = URL(string: urlString) else {
+            completed(nil)
+            return
+        }
+        //creating URL session using url above
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, respone, error in
+            //checking if data is good, if data is good checking if there is an image in the data, if there is no data/ image return
+            guard let data = data, let image = UIImage(data: data) else {
+                completed(nil)
+                return
+            }
+            
+            //putting this image in cache, so that we dont have to download again
+            self.cache.setObject(image, forKey: cacheKey)
+            
+            //if all above goes fine, sending image to completion handler
+            completed(image)
+        }
+        
+        //start the task (resume)
         task.resume()
     }
     
