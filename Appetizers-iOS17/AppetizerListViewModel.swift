@@ -11,13 +11,20 @@ final class AppetizerListViewModel: ObservableObject {
     //var to store list data
     @Published var appetizers: [Appetizer] = []
     @Published var alertItem: AlertItem?
+    @Published var isLoading = false 
     
     func getAppetizers() {
+        //began loading
+        isLoading = true
+        
         //calling getAppetizers from nwmanager
         //adding self above, so no need to add self to all variables used within a closure
         NetworkManager.shared.getAppetizers { [self] result in
             //need to run below code in async as it is responsible for setting views
             DispatchQueue.main.async {
+                //loading completed - setting to false
+                isLoading = false
+                
                 switch result {
                 case .success(let appetizers):
                     self.appetizers = appetizers

@@ -12,20 +12,29 @@ struct AppetizerListView: View {
     @StateObject var viewModel = AppetizerListViewModel()
     
     var body: some View {
-        NavigationView {
-            List(viewModel.appetizers) { appetizer in
-                AppetizerListCell(appetizer: appetizer)
+        //using zstack to overlap loading screen onto navigation view (while loading)
+        ZStack {
+            NavigationView {
+                List(viewModel.appetizers) { appetizer in
+                    AppetizerListCell(appetizer: appetizer)
+                }
+                .navigationTitle("🍟 Appetizers")
+                .listStyle(.plain)
             }
-            .navigationTitle("🍟 Appetizers")
-            .listStyle(.plain)
-        }
-        .onAppear {
-            //as swiftui cannot call a function, it needs to be executed here
-            //this is equivalent to viewdidappear
-            viewModel.getAppetizers()
+            .onAppear {
+                //as swiftui cannot call a function, it needs to be executed here
+                //this is equivalent to viewdidappear
+                viewModel.getAppetizers()
+            }
+            
+            //loading screen 
+            if viewModel.isLoading {
+                LoadingView()
+            }
+            
         }
         .alert(item: $viewModel.alertItem) { alertItem in
-            //everytime alertItem changes in viewModel, this part .alert get called 
+            //everytime alertItem changes in viewModel, this part .alert get called
             Alert(title: alertItem.title,
                   message: alertItem.message,
                   dismissButton: alertItem.dismissButton)

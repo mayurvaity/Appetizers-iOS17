@@ -20,6 +20,8 @@
 		0D7957D62C1770A2004B683E /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957D52C1770A2004B683E /* APError.swift */; };
 		0D7C94B62C18C5C20023B33C /* AppetizerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C94B52C18C5C20023B33C /* AppetizerListViewModel.swift */; };
 		0D7C94B82C18C9B00023B33C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C94B72C18C9B00023B33C /* Alert.swift */; };
+		0D7C94BA2C18D0B80023B33C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C94B92C18D0B80023B33C /* LoadingView.swift */; };
+		0D7C94BC2C18D1A80023B33C /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C94BB2C18D1A80023B33C /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		0D7957D52C1770A2004B683E /* APError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
 		0D7C94B52C18C5C20023B33C /* AppetizerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListViewModel.swift; sourceTree = "<group>"; };
 		0D7C94B72C18C9B00023B33C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		0D7C94B92C18D0B80023B33C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0D7C94BB2C18D1A80023B33C /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				0D7957D52C1770A2004B683E /* APError.swift */,
 				0D7C94B52C18C5C20023B33C /* AppetizerListViewModel.swift */,
 				0D7C94B72C18C9B00023B33C /* Alert.swift */,
+				0D7C94B92C18D0B80023B33C /* LoadingView.swift */,
+				0D7C94BB2C18D1A80023B33C /* Color+Ext.swift */,
 			);
 			path = "Appetizers-iOS17";
 			sourceTree = "<group>";
@@ -168,7 +174,9 @@
 				0D7957D62C1770A2004B683E /* APError.swift in Sources */,
 				0D7C94B62C18C5C20023B33C /* AppetizerListViewModel.swift in Sources */,
 				0D7957D22C176C6B004B683E /* AppetizerListCell.swift in Sources */,
+				0D7C94BC2C18D1A80023B33C /* Color+Ext.swift in Sources */,
 				0D7957CC2C1756A8004B683E /* AccountView.swift in Sources */,
+				0D7C94BA2C18D0B80023B33C /* LoadingView.swift in Sources */,
 				0D7957BE2C1755F6004B683E /* AppetizerTabView.swift in Sources */,
 				0D7957D42C176EE7004B683E /* NetworkManager.swift in Sources */,
 				0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */,
