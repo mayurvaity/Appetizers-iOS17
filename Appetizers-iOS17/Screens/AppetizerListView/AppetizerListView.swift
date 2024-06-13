@@ -11,6 +11,7 @@ struct AppetizerListView: View {
     
     @StateObject var viewModel = AppetizerListViewModel()
     
+    
     var body: some View {
         //using zstack to overlap loading screen onto navigation view (while loading)
         ZStack {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D27AD9A2C19F46A006957F0 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D27AD992C19F46A006957F0 /* RemoteImage.swift */; };
+		0D6AE4AB2C1B4FF20094C592 /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AE4AA2C1B4FF20094C592 /* AppetizerDetailView.swift */; };
 		0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957BB2C1755F6004B683E /* Appetizers_iOS17App.swift */; };
 		0D7957BE2C1755F6004B683E /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957BD2C1755F6004B683E /* AppetizerTabView.swift */; };
 		0D7957C02C1755F7004B683E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7957BF2C1755F7004B683E /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		0D27AD992C19F46A006957F0 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		0D6AE4AA2C1B4FF20094C592 /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
 		0D7957B82C1755F6004B683E /* Appetizers-iOS17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Appetizers-iOS17.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7957BB2C1755F6004B683E /* Appetizers_iOS17App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizers_iOS17App.swift; sourceTree = "<group>"; };
 		0D7957BD2C1755F6004B683E /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				0D7C94B52C18C5C20023B33C /* AppetizerListViewModel.swift */,
 				0D7957C92C175696004B683E /* AppetizerListView.swift */,
+				0D6AE4AA2C1B4FF20094C592 /* AppetizerDetailView.swift */,
 			);
 			path = AppetizerListView;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				0D7957BE2C1755F6004B683E /* AppetizerTabView.swift in Sources */,
 				0D7957D42C176EE7004B683E /* NetworkManager.swift in Sources */,
 				0D27AD9A2C19F46A006957F0 /* RemoteImage.swift in Sources */,
+				0D6AE4AB2C1B4FF20094C592 /* AppetizerDetailView.swift in Sources */,
 				0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */,
 				0D7C94B82C18C9B00023B33C /* Alert.swift in Sources */,
 				0D7957CA2C175696004B683E /* AppetizerListView.swift in Sources */,
