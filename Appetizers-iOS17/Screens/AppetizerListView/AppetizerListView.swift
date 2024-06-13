@@ -10,9 +10,7 @@ import SwiftUI
 struct AppetizerListView: View {
     
     @StateObject var viewModel = AppetizerListViewModel()
-    @State private var isShowingDetail = false 
-    //to keep value of selected cell
-    @State private var selectedAppetizer: Appetizer?
+    
     
     var body: some View {
         //using zstack to overlap loading screen onto navigation view (while loading)
@@ -21,26 +19,26 @@ struct AppetizerListView: View {
                 List(viewModel.appetizers) { appetizer in
                     AppetizerListCell(appetizer: appetizer)
                         .onTapGesture {
-                            selectedAppetizer = appetizer
-                            isShowingDetail = true
+                            viewModel.selectedAppetizer = appetizer
+                            viewModel.isShowingDetail = true
                         }
                 }
                 .navigationTitle("🍟 Appetizers")
                 .listStyle(.plain)
-                .disabled(isShowingDetail)  // to disable list view when clicked on a cell
+                .disabled(viewModel.isShowingDetail)  // to disable list view when clicked on a cell
             }
             .onAppear {
                 //as swiftui cannot call a function, it needs to be executed here
                 //this is equivalent to viewdidappear
                 viewModel.getAppetizers()
             }
-            .blur(radius: isShowingDetail ? 20 : 0)  //to make this navigation view when clicked on a cell
+            .blur(radius: viewModel.isShowingDetail ? 20 : 0)  //to make this navigation view when clicked on a cell
             
             
             //detail view
-            if isShowingDetail {
-                AppetizerDetailView(appetizer: selectedAppetizer ?? MockData.sampleAppetizer, 
-                                    isShowingDetail: $isShowingDetail)
+            if viewModel.isShowingDetail {
+                AppetizerDetailView(appetizer: viewModel.selectedAppetizer ?? MockData.sampleAppetizer,
+                                    isShowingDetail: $viewModel.isShowingDetail)
             }
             
             //loading screen

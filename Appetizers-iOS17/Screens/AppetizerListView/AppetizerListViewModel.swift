@@ -12,6 +12,10 @@ final class AppetizerListViewModel: ObservableObject {
     @Published var appetizers: [Appetizer] = []
     @Published var alertItem: AlertItem?
     @Published var isLoading = false 
+    //to show detail view 
+    @Published var isShowingDetail = false
+    //to keep value of selected cell
+    @Published var selectedAppetizer: Appetizer?
     
     func getAppetizers() {
         //began loading

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D27AD9A2C19F46A006957F0 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D27AD992C19F46A006957F0 /* RemoteImage.swift */; };
 		0D6AE4AB2C1B4FF20094C592 /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AE4AA2C1B4FF20094C592 /* AppetizerDetailView.swift */; };
+		0D6AE4AE2C1B62EB0094C592 /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AE4AD2C1B62EB0094C592 /* APButton.swift */; };
+		0D6AE4B02C1B64AA0094C592 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AE4AF2C1B64AA0094C592 /* XDismissButton.swift */; };
 		0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957BB2C1755F6004B683E /* Appetizers_iOS17App.swift */; };
 		0D7957BE2C1755F6004B683E /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7957BD2C1755F6004B683E /* AppetizerTabView.swift */; };
 		0D7957C02C1755F7004B683E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7957BF2C1755F7004B683E /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		0D27AD992C19F46A006957F0 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		0D6AE4AA2C1B4FF20094C592 /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
+		0D6AE4AD2C1B62EB0094C592 /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
+		0D6AE4AF2C1B64AA0094C592 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		0D7957B82C1755F6004B683E /* Appetizers-iOS17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Appetizers-iOS17.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7957BB2C1755F6004B683E /* Appetizers_iOS17App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizers_iOS17App.swift; sourceTree = "<group>"; };
 		0D7957BD2C1755F6004B683E /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		0D6AE4A62C1B4E2E0094C592 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0D6AE4AC2C1B62E10094C592 /* Button */,
 				0D6AE4A92C1B4E510094C592 /* Image */,
 				0D6AE4A82C1B4E480094C592 /* Cells */,
 				0D6AE4A72C1B4E350094C592 /* UIKit Components */,
@@ -170,6 +175,15 @@
 				0D27AD992C19F46A006957F0 /* RemoteImage.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		0D6AE4AC2C1B62E10094C592 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				0D6AE4AD2C1B62EB0094C592 /* APButton.swift */,
+				0D6AE4AF2C1B64AA0094C592 /* XDismissButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		0D7957AF2C1755F6004B683E = {
@@ -282,10 +296,12 @@
 			files = (
 				0D7957D02C175F45004B683E /* Appetizer.swift in Sources */,
 				0D7957D62C1770A2004B683E /* APError.swift in Sources */,
+				0D6AE4B02C1B64AA0094C592 /* XDismissButton.swift in Sources */,
 				0D7C94B62C18C5C20023B33C /* AppetizerListViewModel.swift in Sources */,
 				0D7957D22C176C6B004B683E /* AppetizerListCell.swift in Sources */,
 				0D7C94BC2C18D1A80023B33C /* Color+Ext.swift in Sources */,
 				0D7957CC2C1756A8004B683E /* AccountView.swift in Sources */,
+				0D6AE4AE2C1B62EB0094C592 /* APButton.swift in Sources */,
 				0D7C94BA2C18D0B80023B33C /* LoadingView.swift in Sources */,
 				0D7957BE2C1755F6004B683E /* AppetizerTabView.swift in Sources */,
 				0D7957D42C176EE7004B683E /* NetworkManager.swift in Sources */,

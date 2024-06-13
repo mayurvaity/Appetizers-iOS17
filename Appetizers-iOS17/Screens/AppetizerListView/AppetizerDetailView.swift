@@ -10,7 +10,7 @@ import SwiftUI
 struct AppetizerDetailView: View {
     
     let appetizer: Appetizer
-    @Binding var isShowingDetail: Bool 
+    @Binding var isShowingDetail: Bool
     
     var body: some View {
         VStack {
@@ -29,40 +29,11 @@ struct AppetizerDetailView: View {
                     .padding()
                 
                 HStack(spacing: 40) {
-                    VStack(spacing: 5) {
-                        Text("Calories")
-                            .font(.caption)
-                            .fontWeight(.bold)
-                        
-                        Text("\(appetizer.calories)")
-                            .foregroundStyle(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    
-                    VStack(spacing: 5) {
-                        Text("Carbs")
-                            .font(.caption)
-                            .fontWeight(.bold)
-                        
-                        Text("\(appetizer.carbs)")
-                            .foregroundStyle(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    
-                    VStack(spacing: 5) {
-                        Text("Protein")
-                            .font(.caption)
-                            .fontWeight(.bold)
-                        
-                        Text("\(appetizer.protein)")
-                            .foregroundStyle(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
+                    NutritionInfo(title: "Calories", value: appetizer.calories)
+                    NutritionInfo(title: "Carbs", value: appetizer.carbs)
+                    NutritionInfo(title: "Protien", value: appetizer.protein)
+
                 }
-                
             }
             
             Spacer()
@@ -70,13 +41,7 @@ struct AppetizerDetailView: View {
             Button {
                 print("Tapped")
             } label: {
-                Text("$\(appetizer.price, specifier: "%.2f") - Add to Order")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .frame(width: 250, height: 50)
-                    .foregroundStyle(.white)
-                    .background(Color.brandPrimary1)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add to Order")
             }
             .padding(.bottom, 30)
             
@@ -89,24 +54,33 @@ struct AppetizerDetailView: View {
             print("dismiss")
             isShowingDetail = false
         } label: {
-            ZStack {
-                Circle()
-                    .frame(width: 30,height: 30)
-                    .foregroundStyle(.white)
-                    .opacity(0.6)
-                
-                Image(systemName: "xmark")
-                    .imageScale(.small)
-                    .frame(width: 44, height: 44)
-                    .foregroundStyle(.black)
-            }
+            XDismissButton() 
         }, alignment: .topTrailing)
         
-        //above overlay is for creating close button at the top right hand corner 
+        //above overlay is for creating close button at the top right hand corner
     }
 }
 
 #Preview {
-    AppetizerDetailView(appetizer: MockData.sampleAppetizer, 
+    AppetizerDetailView(appetizer: MockData.sampleAppetizer,
                         isShowingDetail: .constant(true))
+}
+
+struct NutritionInfo: View {
+    
+    let title: String
+    let value: Int
+    
+    var body: some View {
+        VStack(spacing: 5) {
+            Text(title)
+                .font(.caption)
+                .fontWeight(.bold)
+            
+            Text("\(value)")
+                .foregroundStyle(.secondary)
+                .fontWeight(.semibold)
+                .italic()
+        }
+    }
 }
