@@ -13,30 +13,37 @@ struct OrderView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                //creating list using ForEach, as we need on swipe delete modifier, which is not available in direct List view
-                List {
-                    ForEach(orderItems) { appetizer in
-                        AppetizerListCell(appetizer: appetizer)
+            ZStack {
+                VStack {
+                    //creating list using ForEach, as we need on swipe delete modifier, which is not available in direct List view
+                    List {
+                        ForEach(orderItems) { appetizer in
+                            AppetizerListCell(appetizer: appetizer)
+                        }
+                        .onDelete(perform: deleteItems) //to delete when swiped left
+                        
+                        //alternate way of writing deletion code
+                        //                    .onDelete { indexSet in
+                        //                        //onDelete is used for swipe to delete a cell in order list
+                        //                        //to delete order item obj at specified index
+                        //                        //indexSet is the index which needs to be deleted
+                        //                        orderItems.remove(atOffsets: indexSet)
+                        //                    }
                     }
-                    .onDelete(perform: deleteItems) //to delete when swiped left 
+                    .listStyle(PlainListStyle()) //for list created using ForEach loop this needs to be specified
                     
-                    //alternate way of writing deletion code
-//                    .onDelete { indexSet in
-//                        //onDelete is used for swipe to delete a cell in order list
-//                        //to delete order item obj at specified index
-//                        //indexSet is the index which needs to be deleted
-//                        orderItems.remove(atOffsets: indexSet)
-//                    }
+                    Button {
+                        print("Order placed")
+                    } label: {
+                        APButton(title: "$99.99 - Place Order")
+                    }
+                    .padding(.bottom, 25)
                 }
-                .listStyle(PlainListStyle()) //for list created using ForEach loop this needs to be specified 
                 
-                Button {
-                    print("Order placed")
-                } label: {
-                    APButton(title: "$99.99 - Place Order")
+                // this vw will appear when above list is empty 
+                if orderItems.isEmpty {
+                    EmptyState(imageName: "empty-order", message: "You have no items in your order.\nPlease add an appetizer!")
                 }
-                .padding(.bottom, 25)
             }
             .navigationTitle("🧾 Orders")
             

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D27AD9A2C19F46A006957F0 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D27AD992C19F46A006957F0 /* RemoteImage.swift */; };
+		0D2901FB2C1DE80500B29C16 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2901FA2C1DE80500B29C16 /* EmptyState.swift */; };
 		0D3A18262C1DB5E30064B61D /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3A18252C1DB5E30064B61D /* AccountViewModel.swift */; };
 		0D3A18282C1DB8200064B61D /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3A18272C1DB8200064B61D /* String+Ext.swift */; };
 		0D3A182A2C1DC3080064B61D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3A18292C1DC3080064B61D /* User.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		0D27AD992C19F46A006957F0 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		0D2901FA2C1DE80500B29C16 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		0D3A18252C1DB5E30064B61D /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		0D3A18272C1DB8200064B61D /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		0D3A18292C1DC3080064B61D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2901F92C1DE7F400B29C16 /* Empty States */ = {
+			isa = PBXGroup;
+			children = (
+				0D2901FA2C1DE80500B29C16 /* EmptyState.swift */,
+			);
+			path = "Empty States";
+			sourceTree = "<group>";
+		};
 		0D6AE49D2C1B4CD30094C592 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +164,7 @@
 		0D6AE4A62C1B4E2E0094C592 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0D2901F92C1DE7F400B29C16 /* Empty States */,
 				0D6AE4AC2C1B62E10094C592 /* Button */,
 				0D6AE4A92C1B4E510094C592 /* Image */,
 				0D6AE4A82C1B4E480094C592 /* Cells */,
@@ -318,6 +329,7 @@
 				0D7957D42C176EE7004B683E /* NetworkManager.swift in Sources */,
 				0D27AD9A2C19F46A006957F0 /* RemoteImage.swift in Sources */,
 				0D3A18282C1DB8200064B61D /* String+Ext.swift in Sources */,
+				0D2901FB2C1DE80500B29C16 /* EmptyState.swift in Sources */,
 				0D6AE4AB2C1B4FF20094C592 /* AppetizerDetailView.swift in Sources */,
 				0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */,
 				0D7C94B82C18C9B00023B33C /* Alert.swift in Sources */,
