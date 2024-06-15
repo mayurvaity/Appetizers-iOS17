@@ -24,7 +24,7 @@ struct AppetizerListView: View {
                         }
                 }
                 .navigationTitle("🍟 Appetizers")
-                .listStyle(.plain)
+                .listStyle(PlainListStyle())
                 .disabled(viewModel.isShowingDetail)  // to disable list view when clicked on a cell
             }
             .onAppear {
