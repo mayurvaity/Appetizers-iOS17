@@ -15,16 +15,16 @@ struct AccountView: View {
         NavigationView {
             Form {
                 Section {
-                    TextField("First Name", text: $viewModel.firstName)
+                    TextField("First Name", text: $viewModel.user.firstName)
                         .autocorrectionDisabled(true)
-                    TextField("Last Name", text: $viewModel.lastName)
+                    TextField("Last Name", text: $viewModel.user.lastName)
                         .autocorrectionDisabled(true)
-                    TextField("Email", text: $viewModel.email)
+                    TextField("Email", text: $viewModel.user.email)
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .autocorrectionDisabled(true)
                     DatePicker("Birthday",
-                               selection: $viewModel.birthDate,
+                               selection: $viewModel.user.birthDate,
                                displayedComponents: .date)
                     
                     Button {
@@ -40,8 +40,8 @@ struct AccountView: View {
                 }
                 
                 Section {
-                    Toggle("Extra Napkins", isOn: $viewModel.extraNapkins)
-                    Toggle("Frequent Refills", isOn: $viewModel.frequentRefills)
+                    Toggle("Extra Napkins", isOn: $viewModel.user.extraNapkins)
+                    Toggle("Frequent Refills", isOn: $viewModel.user.frequentRefills)
                         
                 } header: {
                     Text("Requests")
@@ -51,8 +51,10 @@ struct AccountView: View {
                 
             }
             .navigationTitle("🤣 Account")
-            
-            
+        }
+        .onAppear {
+            //on loading of this view, data will be retrieved from userdefaults and loaded into user obj, using below fn 
+            viewModel.retrieveUser()
         }
         .alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: alertItem.title,
