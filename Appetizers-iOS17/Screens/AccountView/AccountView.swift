@@ -9,29 +9,28 @@ import SwiftUI
 
 struct AccountView: View {
     
-    @State private var firstName = ""
-    @State private var lastName = ""
-    @State private var email = ""
-    @State private var birthDate = Date()
-    @State private var extraNapkins = false
-    @State private var frequentRefills = false
+    @StateObject var viewModel = AccountViewModel()
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    TextField("First Name", text: $firstName)
-                    TextField("Last Name", text: $lastName)
-                    TextField("Email", text: $email)
+                    TextField("First Name", text: $viewModel.firstName)
+                        .autocorrectionDisabled(true)
+                    TextField("Last Name", text: $viewModel.lastName)
+                        .autocorrectionDisabled(true)
+                    TextField("Email", text: $viewModel.email)
                         .keyboardType(.emailAddress)
-                        .textInputAutocapitalization(.none)
+                        .autocapitalization(.none)
                         .autocorrectionDisabled(true)
                     DatePicker("Birthday",
-                               selection: $birthDate,
+                               selection: $viewModel.birthDate,
                                displayedComponents: .date)
                     
                     Button {
                         print("Save")
+                        viewModel.saveChanges()
+                        
                     } label: {
                         Text("Save Changes")
                     }
@@ -41,8 +40,8 @@ struct AccountView: View {
                 }
                 
                 Section {
-                    Toggle("Extra Napkins", isOn: $extraNapkins)
-                    Toggle("Frequent Refills", isOn: $frequentRefills)
+                    Toggle("Extra Napkins", isOn: $viewModel.extraNapkins)
+                    Toggle("Frequent Refills", isOn: $viewModel.frequentRefills)
                         
                 } header: {
                     Text("Requests")
@@ -54,6 +53,11 @@ struct AccountView: View {
             .navigationTitle("🤣 Account")
             
             
+        }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
         }
     }
 }
