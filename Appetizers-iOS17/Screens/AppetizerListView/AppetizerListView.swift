@@ -18,6 +18,8 @@ struct AppetizerListView: View {
             NavigationView {
                 List(viewModel.appetizers) { appetizer in
                     AppetizerListCell(appetizer: appetizer)
+//                        .listRowSeparator(.hidden)        //to hide separator lines between cells
+//                        .listRowSeparatorTint(.brandPrimary1)   //to assign color to separator lines
                         .onTapGesture {
                             viewModel.selectedAppetizer = appetizer
                             viewModel.isShowingDetail = true

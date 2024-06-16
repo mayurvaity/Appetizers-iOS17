@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0DCD2A2C1EECC300A14D80 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0DCD292C1EECC300A14D80 /* CustomModifiers.swift */; };
 		0D27AD9A2C19F46A006957F0 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D27AD992C19F46A006957F0 /* RemoteImage.swift */; };
 		0D2901FB2C1DE80500B29C16 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2901FA2C1DE80500B29C16 /* EmptyState.swift */; };
 		0D3A18262C1DB5E30064B61D /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3A18252C1DB5E30064B61D /* AccountViewModel.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D0DCD292C1EECC300A14D80 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		0D27AD992C19F46A006957F0 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		0D2901FA2C1DE80500B29C16 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		0D3A18252C1DB5E30064B61D /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				0D6AE4A92C1B4E510094C592 /* Image */,
 				0D6AE4A82C1B4E480094C592 /* Cells */,
 				0D6AE4A72C1B4E350094C592 /* UIKit Components */,
+				0D0DCD292C1EECC300A14D80 /* CustomModifiers.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				0D6AE4AB2C1B4FF20094C592 /* AppetizerDetailView.swift in Sources */,
 				0D7957BC2C1755F6004B683E /* Appetizers_iOS17App.swift in Sources */,
 				0D7C94B82C18C9B00023B33C /* Alert.swift in Sources */,
+				0D0DCD2A2C1EECC300A14D80 /* CustomModifiers.swift in Sources */,
 				0D7957CA2C175696004B683E /* AppetizerListView.swift in Sources */,
 				0D7957CE2C1756BA004B683E /* OrderView.swift in Sources */,
 			);

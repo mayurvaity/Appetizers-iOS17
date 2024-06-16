@@ -50,8 +50,15 @@ struct AppetizerDetailView: View {
                 //to dismiss detail view once item is added to the cart 
                 isShowingDetail = false
             } label: {
-                APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add to Order")
+//                APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add to Order")
+                //another way of creating button, using Text and custom modifier below
+                Text("$\(appetizer.price, specifier: "%.2f") - Add to Order")
             }
+            .modifier(StandardButtonStyle())    // specifying custom button modifier
+//            .standardButtonStyle()  // way3 - custom modifier
+//            .buttonStyle(.bordered)
+//            .tint(.brandPrimary1)
+//            .controlSize(.large)
             .padding(.bottom, 30)
             
         }
