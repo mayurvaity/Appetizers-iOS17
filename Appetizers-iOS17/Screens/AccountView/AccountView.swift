@@ -11,18 +11,44 @@ struct AccountView: View {
     
     @StateObject var viewModel = AccountViewModel()
     
+    //obj to store text field whihch is focused
+    @FocusState private var focusedTextField: FormTextField?
+    
+    //enum of fields which needs to be included in focusing
+    enum FormTextField {
+        case firstName, lastName, email
+    }
+    
     var body: some View {
         NavigationView {
             Form {
                 Section {
                     TextField("First Name", text: $viewModel.user.firstName)
+                        .focused($focusedTextField, equals: .firstName)     //to assign focusedTextField var value of this field, when clicked upon
+                        .onSubmit {     //to move focus to next text field (in this case, lastname) when pressed next button
+                            focusedTextField = .lastName
+                        }
+                        .submitLabel(.next)     //setting label of return key on the keyboard
                         .autocorrectionDisabled(true)
+                    
                     TextField("Last Name", text: $viewModel.user.lastName)
+                        .focused($focusedTextField, equals: .lastName)     //to assign focusedTextField var value of this field, when clicked upon
+                        .onSubmit {     //to move focus to next text field (in this case, email) when pressed next button
+                            focusedTextField = .email
+                        }
+                        .submitLabel(.next)     //setting label of return key on the keyboard
                         .autocorrectionDisabled(true)
+                    
                     TextField("Email", text: $viewModel.user.email)
+                        .focused($focusedTextField, equals: .email)     //to assign focusedTextField var value of this field, when clicked upon
+                        .onSubmit {     //to close the keyboard when pressed return (as this is the last field)
+                            focusedTextField = nil
+                        }
+                        .submitLabel(.continue)     //setting label of return key on the keyboard
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .autocorrectionDisabled(true)
+                    
                     DatePicker("Birthday",
                                selection: $viewModel.user.birthDate,
                                displayedComponents: .date)
@@ -51,6 +77,13 @@ struct AccountView: View {
                 
             }
             .navigationTitle("🤣 Account")
+            .toolbar { // to add dismiss button on top of the keyboard, to be able to dismiss the keyboard (if necessary)
+                ToolbarItemGroup(placement: .keyboard) {
+                    Button("Dismiss") {
+                        focusedTextField = nil
+                    }
+                }
+            }
         }
         .onAppear {
             //on loading of this view, data will be retrieved from userdefaults and loaded into user obj, using below fn 
