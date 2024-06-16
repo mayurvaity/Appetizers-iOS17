@@ -28,7 +28,7 @@ struct LoadingView: View {
         ZStack {
             //for background color of loading screen
             Color(.systemBackground)
-                .edgesIgnoringSafeArea(.all)
+                .ignoresSafeArea(.all)
             
             //using above created Uikit based view, to show loading animation on top of above mentioned bg color 
             ActivityIndicator()

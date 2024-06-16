@@ -16,7 +16,7 @@ struct EmptyState: View {
         ZStack {
             //setting background color for empty state view
             Color(.systemBackground)
-                .edgesIgnoringSafeArea(.all)
+                .ignoresSafeArea(.all)
             
             //offset - this modifier is used to adjust this view on screen along x or y axes
             VStack {
