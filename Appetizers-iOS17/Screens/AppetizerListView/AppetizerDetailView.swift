@@ -9,6 +9,11 @@ import SwiftUI
 
 struct AppetizerDetailView: View {
     
+    //creating environment obj to use below
+    //it is an obj that stores list of orders
+    @EnvironmentObject var order: Order 
+    
+    //obj to store selected appetizer
     let appetizer: Appetizer
     @Binding var isShowingDetail: Bool
     
@@ -40,6 +45,10 @@ struct AppetizerDetailView: View {
             
             Button {
                 print("Tapped")
+                //adding selected appetizer to order list, "order" obj in this case 
+                order.add(appetizer)
+                //to dismiss detail view once item is added to the cart 
+                isShowingDetail = false
             } label: {
                 APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add to Order")
             }

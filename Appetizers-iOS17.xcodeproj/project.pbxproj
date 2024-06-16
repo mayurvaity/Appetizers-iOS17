@@ -30,6 +30,7 @@
 		0D7C94B82C18C9B00023B33C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C94B72C18C9B00023B33C /* Alert.swift */; };
 		0D7C94BA2C18D0B80023B33C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C94B92C18D0B80023B33C /* LoadingView.swift */; };
 		0D7C94BC2C18D1A80023B33C /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7C94BB2C18D1A80023B33C /* Color+Ext.swift */; };
+		0DFD91092C1ED9FD001F990E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFD91082C1ED9FD001F990E /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		0D7C94B72C18C9B00023B33C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		0D7C94B92C18D0B80023B33C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0D7C94BB2C18D1A80023B33C /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		0DFD91082C1ED9FD001F990E /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				0D7957CF2C175F45004B683E /* Appetizer.swift */,
 				0D3A18292C1DC3080064B61D /* User.swift */,
+				0DFD91082C1ED9FD001F990E /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				0D7957D62C1770A2004B683E /* APError.swift in Sources */,
 				0D6AE4B02C1B64AA0094C592 /* XDismissButton.swift in Sources */,
 				0D7C94B62C18C5C20023B33C /* AppetizerListViewModel.swift in Sources */,
+				0DFD91092C1ED9FD001F990E /* Order.swift in Sources */,
 				0D3A18262C1DB5E30064B61D /* AccountViewModel.swift in Sources */,
 				0D7957D22C176C6B004B683E /* AppetizerListCell.swift in Sources */,
 				0D7C94BC2C18D1A80023B33C /* Color+Ext.swift in Sources */,

@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct OrderView: View {
-    //obj of list of order items
-    @State private var orderItems = MockData.orderItems
+    
+    //creating environment obj to use below
+    //it is an obj that stores list of orders
+    @EnvironmentObject var order: Order
+    
     
     var body: some View {
         NavigationView {
@@ -17,10 +20,10 @@ struct OrderView: View {
                 VStack {
                     //creating list using ForEach, as we need on swipe delete modifier, which is not available in direct List view
                     List {
-                        ForEach(orderItems) { appetizer in
+                        ForEach(order.items) { appetizer in
                             AppetizerListCell(appetizer: appetizer)
                         }
-                        .onDelete(perform: deleteItems) //to delete when swiped left
+                        .onDelete(perform: order.deleteItems) //to delete when swiped left
                         
                         //alternate way of writing deletion code
                         //                    .onDelete { indexSet in
@@ -35,13 +38,13 @@ struct OrderView: View {
                     Button {
                         print("Order placed")
                     } label: {
-                        APButton(title: "$99.99 - Place Order")
+                        APButton(title: "$\(order.totalPrice, specifier: "%.2f") - Place Order")
                     }
                     .padding(.bottom, 25)
                 }
                 
                 // this vw will appear when above list is empty 
-                if orderItems.isEmpty {
+                if order.items.isEmpty {
                     EmptyState(imageName: "empty-order", message: "You have no items in your order.\nPlease add an appetizer!")
                 }
             }
@@ -50,10 +53,7 @@ struct OrderView: View {
         }
     }
     
-    //fn to delete item at specified offset
-    func deleteItems(at offsets: IndexSet) {
-        orderItems.remove(atOffsets: offsets)
-    }
+    
 }
 
 #Preview {
