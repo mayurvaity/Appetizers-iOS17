@@ -19,7 +19,7 @@ final class ImageLoader: ObservableObject {
         NetworkManager.shared.downloadImage(fromURLString: urlString) { uiImage in
             
             //checking if we got an image from calling download image fn, if we have not then return
-            guard let uiImage = uiImage else {
+            guard let uiImage else {
                 return
             }
             

@@ -46,7 +46,7 @@ final class AccountViewModel: ObservableObject {
     //fn to retrieve user date from UserDefaults
     func retrieveUser() {
         //checking if @AppStorage obj named "userData" has any value, otherwise skipping further actions, as there is no data saved
-        guard let userData = userData else { return }
+        guard let userData else { return }
         
         do {
             //to get data from userdefaults and store it into obj named "user"

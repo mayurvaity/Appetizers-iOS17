@@ -13,6 +13,7 @@ struct AppetizerListCell: View {
     
     var body: some View {
         HStack {
+            //old way of getting image from API and showing in as a view
 //            AppetizerRemoteImage(urlString: appetizer.imageURL)
 //                .aspectRatio(contentMode: .fit)
 //                .frame(width: 120, height: 90)
@@ -22,7 +23,7 @@ struct AppetizerListCell: View {
             //new way of getting image from URL and showing here directly - async Image -
             //it handles both getting image from web as well as if image not found (on web), it replaces it with placeholder
             //dwonside: it doesnot cache images like our custom view above, so images will be downloaded again and again
-            //not suitable for big list of cells 
+            //not suitable for big list of cells
             AsyncImage(url: URL(string: appetizer.imageURL)) { image in
                 //if image was found, we can assign modifiers to it here
                 image

@@ -87,7 +87,7 @@ final class NetworkManager {
         }
         
         //getting data and response from url
-        let (data, response) = try await URLSession.shared.data(from: url)
+        let (data, _) = try await URLSession.shared.data(from: url)
         
         
         //2b. response
@@ -131,7 +131,7 @@ final class NetworkManager {
         //creating URL session using url above
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, respone, error in
             //checking if data is good, if data is good checking if there is an image in the data, if there is no data/ image return
-            guard let data = data, let image = UIImage(data: data) else {
+            guard let data, let image = UIImage(data: data) else {
                 completed(nil)
                 return
             }
