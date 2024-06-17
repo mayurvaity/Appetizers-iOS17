@@ -29,9 +29,9 @@ struct AppetizerListView: View {
                 .listStyle(PlainListStyle())
                 .disabled(viewModel.isShowingDetail)  // to disable list view when clicked on a cell
             }
-            .onAppear {
+            .task {
                 //as swiftui cannot call a function, it needs to be executed here
-                //this is equivalent to viewdidappear
+                //instead of using onAppear this is used for async calls 
                 viewModel.getAppetizers()
             }
             .blur(radius: viewModel.isShowingDetail ? 20 : 0)  //to make this navigation view when clicked on a cell
