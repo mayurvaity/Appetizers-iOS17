@@ -30,8 +30,15 @@ struct LoadingView: View {
             Color(.systemBackground)
                 .ignoresSafeArea(.all)
             
-            //using above created Uikit based view, to show loading animation on top of above mentioned bg color 
-            ActivityIndicator()
+            //old way of loading screen
+            //using above created Uikit based view, to show loading animation on top of above mentioned bg color
+//            ActivityIndicator()
+            
+            //new way of loading screen
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle())
+                .tint(.brandPrimary1)
+                .scaleEffect(2)     //to double the size of the spinner 
             
         }
     }

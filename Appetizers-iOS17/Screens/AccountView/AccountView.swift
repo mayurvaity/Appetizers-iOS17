@@ -49,8 +49,18 @@ struct AccountView: View {
                         .autocapitalization(.none)
                         .autocorrectionDisabled(true)
                     
+                    //in below, default date is today's date
+//                    DatePicker("Birthday",
+//                               selection: $viewModel.user.birthDate,
+//                               displayedComponents: .date)
+//                    
+                    
+                    //specifying date range for minimum and max date range that user is allowed to select
+                    // minimum is 18 yrs (as it is an app for bar)
+                    // maximum is 110 yrs 
                     DatePicker("Birthday",
                                selection: $viewModel.user.birthDate,
+                               in: Date().oneHundredTenYearsAgo...Date().eighteenYearsAgo,
                                displayedComponents: .date)
                     
                     Button {
